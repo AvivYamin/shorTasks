@@ -17,9 +17,11 @@ class BookList{
         this.currentBook = this.nextBook;
         this.books.forEach(book => {
             if(book.read === false){
-                this.currentBook = book;
+                this.nextBook = book;
             }
         });
+        this.notReadBooks--;
+        this.readBooks++;
         console.log(this);
     }
 }
